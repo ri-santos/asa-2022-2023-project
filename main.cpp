@@ -42,7 +42,7 @@ unsigned long long calculateCombinations(vector<int> grid) {
         }
 
         // loop for removing squares that are 2x2 or bigger
-        int i = 1;
+        int i = 0;
         while((grid[line] == grid[line - i]) && grid[line] > i) { 
             for(int j = 0; j <= i; j++) {
                 new_grid[line-j] -= i + 1;
@@ -52,9 +52,6 @@ unsigned long long calculateCombinations(vector<int> grid) {
             i++;
         } 
 
-        new_grid = grid;
-        new_grid[line]--;
-        grid_combs += calculateCombinations(new_grid);
         savedCombinations.insert({grid, grid_combs});
 
 
