@@ -34,7 +34,6 @@ unsigned long long calculateCombinations(vector<int> grid) {
         unsigned long long grid_combs = 0;
         int line = getNextSquare(new_grid);
 
-
         // checking if the grid has only one more possibility
         if(new_grid[line] <= 1) {
             savedCombinations.insert({new_grid, 1});
@@ -53,7 +52,6 @@ unsigned long long calculateCombinations(vector<int> grid) {
         } 
 
         savedCombinations.insert({grid, grid_combs});
-
 
         return grid_combs;
     }
